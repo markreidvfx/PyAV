@@ -1,8 +1,8 @@
 from __future__ import print_function
 
 from distutils.core import Command
-from setuptools import setup, find_packages, Extension
-from setuptools.command.build_ext import build_ext
+from distutils.core import setup, Extension
+from distutils.command.build_ext import build_ext
 from subprocess import Popen, PIPE
 import ctypes.util
 import errno
@@ -245,7 +245,7 @@ setup(
     
     url="https://github.com/mikeboers/PyAV",
 
-    packages=find_packages(exclude=['build*', 'tests*', 'examples*']),
+    packages=["av"],
     
     zip_safe=False,
     ext_modules=ext_modules,
